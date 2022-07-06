@@ -1,0 +1,27 @@
+{% extends 'base_productos.html' %} <!-- ACA llamo al base.html-->
+
+
+{% block titulo %}      
+Eliminar producto
+
+{% endblock %}
+
+
+{% block contenido %} 
+
+
+
+<h3 style="color:black">Estas por Eliminar el producto {{object.name}}</h3>  <!-- Ahora Va object por deault del deletview-->
+
+<form method = "POST"> <!-- Ahora va solo por POST A si mismo -->
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Eliminar</button>
+</form>
+
+
+
+
+{{message}}
+
+
+{% endblock %}
